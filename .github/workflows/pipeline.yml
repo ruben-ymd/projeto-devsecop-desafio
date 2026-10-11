@@ -48,9 +48,10 @@ jobs:
       # Dica: use a action oficial "gitleaks/gitleaks-action@v2" e passe o
       - name: 🔑 Secrets Scanning
         #antes: run: echo "TODO - implemente o Secrets Scanning com Gitleaks aqui"
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo gitleaks/gitleaks-action@v2
+       # uses: gitleaks/gitleaks-action@v2
+        # env:
+       #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # ❌ PASSO A IMPLEMENTAR — SAST com Semgrep
       # Dica: instale com "pip install semgrep" e rode
