@@ -17,8 +17,7 @@ jobs:
   build:
     name: Build, Segurança e Assinatura
     runs-on: ubuntu-latest
-
-steps:
+    steps:
       - name: 📥 Checkout do Código
         uses: actions/checkout@v4
         with:
@@ -48,10 +47,10 @@ steps:
       # Dica: use a action oficial "gitleaks/gitleaks-action@v2" e passe o
       - name: 🔑 Secrets Scanning
       #antes: run: echo "TODO - implemente o Secrets Scanning com Gitleaks aqui"\
-      uses: gitleaks/gitleaks-action@v2
-      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_ACTOR: ${{ github.actor }}
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
       
       # ❌ PASSO A IMPLEMENTAR — SAST com Semgrep
       # Dica: instale com "pip install semgrep" e rode
