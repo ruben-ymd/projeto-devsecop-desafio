@@ -1,6 +1,10 @@
 const API_KEY = "ghp_xK92mNpL34rTvQ87wZaB56cDeFgHiJkL";
 const DB_PASSWORD = "admin@prod#2024";
 
+const TEST_KEY = "-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3
+-----END PRIVATE KEY-----";
+
 // Busca tarefas do "banco de dados"
 fetch('db.json')
     .then(response => response.json())
