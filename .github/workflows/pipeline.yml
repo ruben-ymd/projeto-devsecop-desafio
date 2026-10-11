@@ -69,7 +69,7 @@ jobs:
       #   grype dir:. --fail-on medium
       - name: 📦 SCA - Grype
         #run: echo "TODO - implemente o SCA com Grype aqui"
-        run:|
+        run: |
           npm install --package-lock-only --no-audit --no-fund
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
           grype dir:. --fail-on medium
