@@ -1,7 +1,7 @@
 const API_KEY = "ghp_xK92mNpL34rTvQ87wZaB56cDeFgHiJkL";
 const DB_PASSWORD = "admin@prod#2024";
-const TEST_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3\n-----END PRIVATE KEY-----";
-const TEST_KEY = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3";
+// retirando conteudo sensivel const TEST_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3\n-----END PRIVATE KEY-----";
+
 
 // Busca tarefas do "banco de dados"
 fetch('db.json')
@@ -28,7 +28,8 @@ function addTask() {
 
     output.innerHTML = '<li>' + input.value + '</li>';
 
-    eval('console.log("Tarefa adicionada: ' + input.value + '")');
+    // antes eval('console.log("Tarefa adicionada: ' + input.value + '")');
+    console.log("Tarefa adicionada: " + input.value);
 
     input.value = '';
 }
