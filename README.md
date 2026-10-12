@@ -25,6 +25,31 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 ## Como a pipeline funciona
 > **Substitua este bloco pela sua explicação após implementar a pipeline.**
 > Descreva cada step, o que ele faz e por que ele é importante para a segurança.
+PASSO A IMPLEMENTAR — Secrets Scanning com Gitleaks
+    - Ferramente para escanear dados sensíveis no código. 
+    - Foi identificado Chaves/Tokens/ID mas a ferramenta não identificou devido aos dados sere um exemplo.
+    - Inseri uma chave dado pelo IA e a ferramenta identificou.
+    - Apesar de ter colocado somente para comentário, a ferramenta acusou.
+    - Retiramos os códigos e a ferramena passou sem detectar outro incidente.
 
+PASSO A IMPLEMENTAR — SAST com Semgrep
+    - Objetivo da ferramente é buscar no código fonte falhas de segurança, práticas ruins de programação e vulnerabilidade lógicas. 
+    - Instalei o semgrep via pip
+    - Configurei o scan
+    - Tive alguns problemas de identação.
+    - Foi identificado um hardcoded secret no script.js - risco de injeção de código 
+    - se alguém inserisse comandos maliciosos em vez de uma tarefa comum, o sistema executaria esse código arbitrariamente no navegador de quem estivesse a aceder.
+
+PASSO A IMPLEMENTAR — SCA com Grype
+    - Instalei o package lock - arquivo de controle gerado automaticamente pelo gestor de pacotes do Node.js (npm) sempre que dependências são instaladas num projeto.
+    - Instalado Grype
+    # Depois instale o Grype:
+      #   curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+     
+        Garante que, no ambiente virtual onde o pipeline está a rodar (que pode ser uma máquina limpa da cloud do GitHub), a ferramenta Grype esteja instalada e pronta a ser usada.
+      # E rode:
+      #   grype dir:. --fail-on medium
+    - Foram identificados na ferramenta as dependências desatualizadas.
+    - Atualizamos mas mesmo assim a ferramenta ainda acusa dependências desatualizadas.
 ## URL de Produção
 > Adicione aqui o link do GitHub Pages após o deploy.
