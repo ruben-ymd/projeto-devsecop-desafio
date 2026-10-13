@@ -1,6 +1,5 @@
-
 // retirando conteudo sensivel const. mesmo deixando em comentários, a ferramenta acusa que possui info sensíveis;
-
+const MINHA_SENHA_PROJETO = '__MINHA_SENHA_PROJETO__';
 
 // Busca tarefas do "banco de dados"
 fetch('db.json')

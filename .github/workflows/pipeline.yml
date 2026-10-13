@@ -31,11 +31,11 @@ jobs:
       #   - insira uma referência para encontrá-la no código (exemplo CHAVE = "__CHAVE__")
       #   - injete a variável na referência, usando um sed 
       - name: 🔐 Inserir Secrets no JavaScript
-        #env:
-          #VAR: ${{ secrets.VAR  }}
+        env:
+          MINHA_SENHA_PROJETO: ${{ secrets.MINHA_SENHA_PROJETO }}
         run: |
-          echo "Nenhum segredo inserido no código por enquanto"
-      #   sed -i "s|__VAR__|$VAR|g" src/script.js
+      
+         sed -i "s|__MINHA_SENHA_PROJETO__|$MINHA_SENHA_PROJETO|g" src/script.js
 
       - name: ⚙️ Build
         run: |
