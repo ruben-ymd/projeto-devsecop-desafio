@@ -26,9 +26,9 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 > **Substitua este bloco pela sua explicação após implementar a pipeline.**
 > Descreva cada step, o que ele faz e por que ele é importante para a segurança.
 PASSO A IMPLEMENTAR — Secrets Scanning com Gitleaks
-    - Ferramente para escanear dados sensíveis no código. 
-    - Foi identificado Chaves/Tokens/ID mas a ferramenta não identificou devido aos dados sere um exemplo.
-    - Inseri uma chave dado pelo IA e a ferramenta identificou.
+    - Ferramenta para escanear dados sensíveis no código. 
+    - Foi identificado Chaves/Tokens/ID mas a ferramenta não identificou devido aos dados serem um exemplo (segundo IA).
+    - Inseri uma chave dado pelo IA como exemplo e a ferramenta identificou.
     - Apesar de ter colocado somente para comentário, a ferramenta acusou.
     - Retiramos os códigos e a ferramena passou sem detectar outro incidente.
 
@@ -43,12 +43,6 @@ PASSO A IMPLEMENTAR — SAST com Semgrep
 PASSO A IMPLEMENTAR — SCA com Grype
     - Instalei o package lock - arquivo de controle gerado automaticamente pelo gestor de pacotes do Node.js (npm) sempre que dependências são instaladas num projeto.
     - Instalado Grype
-    # Depois instale o Grype:
-      #   curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
-     
-        Garante que, no ambiente virtual onde o pipeline está a rodar (que pode ser uma máquina limpa da cloud do GitHub), a ferramenta Grype esteja instalada e pronta a ser usada.
-      # E rode:
-      #   grype dir:. --fail-on medium
     - Foram identificados na ferramenta as dependências desatualizadas.
     - Atualizamos mas mesmo assim a ferramenta ainda acusa dependências desatualizadas.
     - Instalei o node para verificar as versões mais recentes os package.
