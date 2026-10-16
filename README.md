@@ -54,6 +54,16 @@ PASSO A IMPLEMENTAR — SCA com Grype
     - Instalei o node para verificar as versões mais recentes os package.
     - Rodei a Grype e achou vulnerabilidade em pipeline.yml em linha 133 actions/downlaod-artifact. versao instalada v4
     - Rodei novamente e passou com sucesso.
-    
+
+
+
+
+
+
+
+
+
+
+
 ## URL de Produção
 > Adicione aqui o link do GitHub Pages após o deploy.
