@@ -51,5 +51,6 @@ PASSO A IMPLEMENTAR — SCA com Grype
 
 
 ## URL de Produção
-> Adicione aqui o link do GitHub Pages após o deploy.
+> Adicione aqui o link do GitHub Pages após o deploy. 
+
 https://ruben-ymd.github.io/projeto-devsecop-desafio/
